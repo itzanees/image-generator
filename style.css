@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #7fffd4;
+}
+
+.head{
+    padding-top: 50px;
+    font-family: 'Lilita One', cursive;
+    font-size: 50px;
+    text-align: center;
+    color: #ff489d;
+}
+
+.generator{
+    /* display: inline-block; */
+    width: 100%;
+    height: auto;
+    background-color:beige;
+}
+
+
+.image{
+    position: relative;
+    bottom: 0;
+    padding-left: 10%;
+}
+
+#bg{
+    position: absolute;
+    z-index: 1;
+}
+
+.ears{
+    position: absolute;
+    z-index: 2;
+}
+
+.neck{
+    position: absolute;
+    z-index: 3;
+}
+
+.accessories{
+    position: absolute;
+    z-index: 4;
+    left:200px;
+}
+
+.hair{
+    position: absolute;
+    z-index: 5;
+}
+
+.nose{
+    position: absolute;
+    z-index: 6;
+}
+
+.mouth{
+    position: absolute;
+    z-index: 7;
+}
+
+.eyes{
+    position: absolute;
+    z-index: 8;
+}
+
+.leg{
+    position: absolute;
+    z-index: 9;
+}
+/*
+.customize{
+    display: block;
+    float: right;
+    height: 250px;
+    padding-right: 10%;
+}
+
+*/
