@@ -5,54 +5,142 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Alpaca Image Generator</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300&family=Lilita+One&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="head">
-        <h1>Aplaca Generator</h1>
+        <h1>Alpaca Generator</h1>
     </div>
 
-    <div class="generator">
-        <div class="image left">
-            <img src="./images/backgrounds/blue50.png" id="bg">
-            <img src="./images/neck/default.png" class="neck">
-            <img src="./images/ears/default.png" class="ears">
-            <img src="./images/accessories/headphone.png" class="accessories">
-            <img src="./images/eyes/default.png" class="eyes">
-            <img src="./images/mouth/laugh.png" class="mouth">
-            <img src="./images/hair/curls.png" class="hair">
-            <img src="./images/leg/default.png" class="leg">
-            <img src="./images/nose.png" class="nose">
-            
-        </div>
-
-        <div class="customize right">
-            <div id="top">
-                <h3>Accessorize the Alpaca's</h3>
-                <button>Hair</button>
-                <button id="ears">Ears</button>
-                <button id="eyes">Eyes</button>
-                <button id="mouth">Mouth</button>
-                <button id="neck">Neck</button>
-                <button id="leg">Leg</button>
-                <button id="accessories">Accessories</button>
-                <button id="background">Background</button>
-            </div>
-            <div id="bottom">
-                <h3>Style</h3>
-                <!-- button# -->
-            </div>
-        </div>
-
-    </div>
-
-    <div>
-        <button class="random">Random</button>
-        <button class="download">Download</button>
-    </div>
-            
     
+    <div class="generator">
+        <div class="leftDiv">
+            <div class="showImg">
+                <div class="image" id="alpa-img">
+                    <img src="./images/backgrounds/blue50.png" id="backgroundspic" class="pic bg">
+                    <img src="./images/neck/default.png" id="neckpic" class="neck pic">
+                    <img src="./images/ears/default.png" id="earspic" class="ears pic">
+                    <img src="./images/accessories/headphone.png" id="accessoriespic" class="accessories pic">
+                    <img src="./images/eyes/default.png" id="eyespic" class="eyes pic">
+                    <img src="./images/mouth/default.png" id="mouthpic" class="mouth pic">
+                    <img src="./images/hair/default.png" id="hairpic" class="hair pic">
+                    <img src="./images/leg/default.png" id="legpic" class="leg pic">
+                    <img src="./images/nose.png" id="nosepic" class="nose pic">
+                </div>
+            </div>
+        </div>
+
+        <div class="rightDiv">
+            <div class="customize">
+                <div id="top">
+                    <h3>Accessorize the Alpaca's</h3>
+                    <button id="hair" class="menu active">Hair</button>
+                    <button id="ears" class="menu">Ears</button>
+                    <button id="eyes" class="menu">Eyes</button>
+                    <button id="mouth" class="menu">Mouth</button>
+                    <button id="neck" class="menu">Neck</button>
+                    <button id="leg" class="menu">Leg</button>
+                    <button id="accessories" class="menu">Accessories</button>
+                    <button id="backgrounds" class="menu">Background</button>
+            </div>
+
+            <br>
+            <div id="bottom">
+                <h3 id="styleH3">Style </h3>
+                <div class="HairStyle">
+                    <button class="style selected" id="default">Default</button>
+                    <button class="style" id="bang">Bang</button>
+                    <button class="style" id="curls">Curls</button>
+                    <button class="style" id="elegant">Elegant</button>
+                    <button class="style" id="fancy">Fancy</button>
+                    <button class="style" id="quiff">Quiff</button>
+                    <button class="style" id="short">Short</button>
+                </div>
+
+                <div class="EarsStyle hidden">
+                    <button id="default" class="style selected">Default</button>
+                    <button id="tilt-backward" class="style">Tilt-backward</button>
+                    <button id="tilt-forward" class="style">Tilt-forward</button>
+                </div>
+
+                <div class="EyesStyle hidden">
+                    <button id="efault" class="style selected">Default</button>
+                    <button id="angry" class="style">Angry</button>
+                    <button id="naughty" class="style">Naughty</button>
+                    <button id="panda" class="style">Panda</button>
+                    <button id="smart" class="style">Smart</button>
+                    <button id="star" class="style">Star</button>
+                </div>
+                
+                <div class="MouthStyle hidden">
+                    <button id="default" class="style selected">Default</button>
+                    <button id="astonished" class="style">Astonished</button>
+                    <button id="eating" class="style">Eating</button>
+                    <button id="laugh" class="style">Laugh</button>
+                    <button id="tongue" class="style">Tongue</button>
+                </div>
+
+                <div class="NeckStyle hidden">
+                    <button id="default" class="style selected">Default</button>
+                    <button id="bend-backward" class="style">Bend-backward</button>
+                    <button id="bend-forward" class="style">Bend-forward</button>
+                    <button id="thick" class="style">Thick</button>
+                </div>
+                
+                <div class="LegStyle hidden">
+                    <button id="default" class="style selected">Default</button>
+                    <button id="bubble-tea" class="style">Bubble-tea</button>
+                    <button id="cookie" class="style">Cookie</button>
+                    <button id="game-console" class="style">Game-console</button>
+                    <button id="tilt-backward" class="style">Tilt-backward</button>
+                    <button id="tilt-forward" class="style">Tilt-forward</button>
+                </div>
+                
+                <div class="AccessoriesStyle hidden">
+                    <button id="earings" class="style selected">Ear ring</button>
+                    <button id="flower" class="style">Flower</button>
+                    <button id="glasses" class="style">Glasses</button>
+                    <button id="headphone" class="style">Headphone</button>
+                </div>
+                
+                <div class="BackgroundStyle hidden">
+                    <button id="blue50" class="style submenu selected">Blue50</button>
+                    <button id="blue60" class="style submenu">Blue60</button>
+                    <button id="blue70" class="style submenu">Blue70</button>
+                    <button id="darkblue30" class="style submenu">Dark Blue30</button>
+                    <button id="darkblue50" class="style submenu">Dark Blue50</button>
+                    <button id="darkblue70" class="style submenu">Dark Blue70</button>
+                    <button id="green50" class="style submenu">Green 50</button>
+                    <button id="green60" class="style submenu">Green 60</button>
+                    <button id="green70" class="style submenu">Green 70</button>
+                    <button id="grey40" class="style submenu">Grey 40</button>
+                    <button id="grey70" class="style submenu">Grey 70</button>
+                    <button id="grey80" class="style submenu">Grey 80</button>
+                    <button id="red50" class="style submenu">Red 50</button>
+                    <button id="red60" class="style submenu">Red 60</button>
+                    <button id="red70" class="style submenu">Red 70</button>
+                    <button id="yellow50" class="style submenu">Yellow 50</button>
+                    <button id="yellow60" class="style submenu">Yellow 60</button>
+                    <button id="yellow70" class="style submenu">Yellow 70</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        
+    </div>
+    
+    <div class="tools">
+        <button class="tool" id="random">🔀 Random</button>
+        <button class="tool" id="download">💾 Download</button>
+    </div>
+
+    
+    <script src="./generator.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+
 </body>
 </html>
