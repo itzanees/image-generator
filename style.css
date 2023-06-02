@@ -20,33 +20,22 @@ body {
     position: absolute;
 }
 .leftDiv, .rightDiv{
+    padding-top: 2%;
     position: relative;
-    width: 45%;
-    height: -webkit-fill-available;
-    margin: 2%;
-    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+    width: 35%;
+    height: 35%;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 .leftDiv{
     float: left;
-    padding: 10%;
+    padding-left: 10%;
 }
 .rightDiv{
-    padding-top:2%;
+    margin-right: 10%;
     float: right;
 }
-.showImg{
-    position: absolute;
-    padding-left: 20%;
-    padding-bottom: 10px;
-    width: 50%;
-    bottom: 25px;
-}
-.image{
-    position: absolute;
-    float: left;
-    height: 400px;
-    bottom: 0;
-}
+
 .customize {
     text-align: center;
     position: relative;
@@ -54,9 +43,12 @@ body {
     height: 250px;
 }
 .tools {
-    padding-top: 32%;
+    padding-top: 33%;
     text-align: center;
-    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1),0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+.image {
+    height: 400px;
+    width: 400px;
 }
 .bg{
     position: absolute;
@@ -136,9 +128,7 @@ button:hover {
 }
 
 @media only screen and (max-device-width:600px) {
-    /* body{
-        background-color: #fff;
-    } */
+
     .leftDiv, .rightDiv{
         width: 95%;
         height: 60%;
