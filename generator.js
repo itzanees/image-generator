@@ -7,36 +7,24 @@ const neckStyle = ["default", "bend-backward", "bend-forward", "thick"];
 const legStyle = ["default", "bubble-tea", "cookie", "game-console", "tilt-backward", "tilt-forward"];
 const accessStyle = ["earings", "flower", "glasses", "headphone"];
 const bgStyle = ["blue50", "blue60", "blue70", "darkblue70",  "grey70", "yellow50", "green50", "grey80", "yellow60", "green60", "red50", "yellow70","darkblue30", "green70", "red60", "darkblue50", "grey40", "red70"];
-
-
 // SELECTING MENU BUTTONS
-
 var menus = document.querySelectorAll(".menu");
 var menuLen = menus.length;
 var currentMenu = document.querySelector(".active");
-
 // CHANGING H3 TEXT OF STYLE BUTTONS DIV
-
 var styleH3 = currentMenu.textContent + " Styles";
 document.querySelector("#styleH3").textContent = styleH3;
-
 var viewStyle = document.querySelector("." + currentMenu.textContent + "Style");
-
 // SELECTING STYLE BUTTONS
-
 var styles = document.querySelectorAll(".style");
 var styleLen = styles.length;
 var currentStyle = document.querySelector(".style.selected");
-
+// SELECTING TOOLS
 var tools = document.querySelectorAll(".tool");
 var toolsLen = tools.length;
-
-
 // SELECTING ALL MENU BUTTON
-
 for(var i=0;i<menuLen; i++){
     menus[i].addEventListener('click', function(){
-
         currentMenu.classList.toggle("active");
         viewStyle.classList.toggle("hidden");
         viewStyle = document.querySelector("." + this.textContent + "Style");
@@ -45,9 +33,7 @@ for(var i=0;i<menuLen; i++){
         changeMenu(currentMenu);
     });
 }
-
 // SELECTING ALL STYLE BUTTON
-
 for (var i = 0; i < styleLen; i++) {
     styles[i].addEventListener('click', function () {
         console.log(currentStyle.classList);
@@ -56,9 +42,7 @@ for (var i = 0; i < styleLen; i++) {
         changeStyle(currentStyle);
     });
 }
-
 // SELECTING TOOLS ELEMENTS
-
 for(var i = 0; i < toolsLen; i++){
     tools[i].addEventListener('click', function(){
         if(this.id ==="random"){
@@ -68,31 +52,23 @@ for(var i = 0; i < toolsLen; i++){
         }
     });
 }
-
 // CHANGING SELECTION BUTTON AS PER CLICK
-
 function changeMenu(menu){
     currentMenu = document.querySelector("#"+ menu.id);
     currentMenu.classList.toggle("active");
     styleH3 = menu.textContent + " Styles";
     document.querySelector("#styleH3").textContent = styleH3;
 }
-
-
 function changeStyle(style) {
     style.classList.add("selected");
     var styleElement = document.querySelector("#"+currentStyle.id);
     changeImage(currentMenu.id, styleElement.id);
 }
-
-
 function changeImage(menu, option){
     var imgSrc = "./images/"+ menu +"/" + option + ".png";
     var imgSelector = document.querySelector("#"+menu+"pic");
     imgSelector.src = imgSrc;
 }
-
-
 function randomImg() {
     var menuLen = styleMenu.length;
     var hairLen = hairStyle.length;
@@ -103,7 +79,6 @@ function randomImg() {
     var legLen = legStyle.length;
     var accessLen = accessStyle.length;
     var bgLen = bgStyle.length;
-
     for(var i = 0; i < menuLen; i++){
         switch (styleMenu[i]) {
             case "hair":
@@ -144,16 +119,12 @@ function randomImg() {
         }
     }
 }
-
-
-
-function downloadImg(){
-
+function downloadImg() {
     var imgElements = document.querySelector("#alpa-img");
-    html2canvas(imgElements).then(function (canvas){
+    html2canvas(imgElements).then(function (canvas) {
         console.log(canvas.toDataURL("image/png", 0.9));
         canvas.toBlob(function (blob) {
             window.saveAs(blob, "Alpaca.png");
         });
     });
-    }
+}
