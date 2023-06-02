@@ -3,46 +3,37 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     background-color: #383c41b8;
+    font-family: 'Geologica', sans-serif;
+    color: #fff;
 }
-
 .head{
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding: 25px 0;
     font-family: 'Lilita One', cursive;
     font-size: 50px;
     text-align: center;
     color: #fff;
 }
-
 .generator{
     height: 60%;
     position: absolute;
 }
-
+.leftDiv, .rightDiv{
+    position: relative;
+    width: 45%;
+    height: -webkit-fill-available;
+    margin: 2%;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
 .leftDiv{
-    position: relative;
     float: left;
-    width: 45%;
-    height: -webkit-fill-available;
-    margin-left: 2%;
-    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1),
-    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+    padding: 10%;
 }
-
 .rightDiv{
-    position: relative;
+    padding-top:2%;
     float: right;
-    width: 45%;
-    height: -webkit-fill-available;
-    margin-right: 25px;
-    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1),
-    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }
-
-
 .showImg{
     position: absolute;
     padding-left: 20%;
@@ -50,120 +41,135 @@ body {
     width: 50%;
     bottom: 25px;
 }
-
 .image{
     position: absolute;
     float: left;
-    width: 400px;
     height: 400px;
     bottom: 0;
-    justify-content: center;
-    align-items: center;
 }
-
 .customize {
     text-align: center;
     position: relative;
     float: right;
     height: 250px;
-    justify-content: center;
-    align-items: center;
 }
-
 .tools {
     padding-top: 32%;
     text-align: center;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1),0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }
-
 .bg{
     position: absolute;
     z-index: 1;
     box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1),
     0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }
-
 .ears{
     position: absolute;
     z-index: 2;
 }
-
 .neck{
     position: absolute;
     z-index: 3;
 }
-
 .accessories{
     position: absolute;
     z-index: 14;
 }
-
 .nose{
     position: absolute;
     z-index: 5;
 }
-
 .hair{
     position: absolute;
     z-index: 6;
 }
-
 .mouth{
     position: absolute;
     z-index: 7;
 }
-
 .eyes{
     position: absolute;
     z-index: 8;
 }
-
 .leg{
     position: absolute;
     z-index: 9;
 }
-
 .pic{
     width: 400px;
 }
-
 button, .menu, .style{
   width: 200px;
-  height: 45px;
+  height: fit-content;
   padding: 5px;
   margin: 5px;
   border: 3px solid #9748ff;
   border-radius: 8px;
   font-family: 'Geologica', sans-serif;
-  font-size: 13px;
+  font-size: 20px;
   font-weight: bold;
   color: #000;
 }
-
 button:hover{
     box-shadow: 0 12px 16px 0 #0000003d, 0 17px 50px 0 #00000030;
 }
-
-
 button:hover {
     background-color: #5616df;
     color: #fff;
 }
-
 .menu.active, .style.selected, .tools.active {
     background-color: #b700ff;
     color: #ffffff;
 }
-
-.submenu{
-    width: 115px;
-    height: 45px;
+.style{
+    width: fit-content;
+    font-size: 20px;
+    /*height: 45px;
     padding: 5px;
-    margin: 5px;
+    margin: 5px; */
     border: 3px solid #9748ff;
     border-radius: 8px;
 }
-
-
 .hidden{
     display: none;
+}
+
+@media only screen and (max-device-width:600px) {
+    /* body{
+        background-color: #fff;
+    } */
+    .leftDiv, .rightDiv{
+        width: 95%;
+        height: 60%;
+        margin: 2.5%;
+        padding: 5%;
+    }
+    .showImg{
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        padding-left: 0;
+        text-align: center;
+    }
+    .tools{
+        padding-bottom: 25%;
+        margin-top: 113%;
+    }
+    .image{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-left: auto;
+    }
+    button, .menu, .style{
+        font-size: 35px;
+        font-weight: normal;
+        width: fit-content;
+        height: fit-content;
+    }
+    .pic{
+        width: 600px;
+        left: 100px;
+    }
 }
